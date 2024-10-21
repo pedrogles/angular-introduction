@@ -3,3 +3,7 @@
 } @else {
     <p>Reprovado, sua média é {{media}}</p>
 }
+
+@for(aluno of alunos; track $index) {
+    <p>{{$index}} - {{aluno}}</p>
+}

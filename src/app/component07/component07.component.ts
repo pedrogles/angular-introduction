@@ -9,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class Component07Component {
   media:number = 6;
+  alunos:string[] = ['Pedro', 'João', 'Marcos', 'Felipe']
 }
