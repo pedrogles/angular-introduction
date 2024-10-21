@@ -7,3 +7,10 @@
 @for(aluno of alunos; track $index) {
     <p>{{$index}} - {{aluno}}</p>
 }
+
+@switch (linguagem) {
+    @case ('HTML') {<p>Linguagem de marcação.</p>}
+    @case ('CSS') {<p>Linguagem de estilo.</p>}
+    @case ('JS') {<p>Linguagem de programação.</p>}
+    @default {<p>Linguagem não encontrada.</p>}
+}
