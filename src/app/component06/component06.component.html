@@ -1,8 +1,17 @@
-<h1>Resultado</h1>
+<h1>Resultado com ngStyle</h1>
 <ul>
     <li 
         *ngFor="let a of alunos, index as i" 
         [ngStyle]="{'color': a.approved ? 'blue' : 'red'}">
+            {{i}} - {{a.name}}
+    </li>
+</ul>
+
+<h1>Resultado com ngClass</h1>
+<ul>
+    <li 
+        *ngFor="let a of alunos, index as i" 
+        [ngClass]="a.approved ? 'blue' : 'red'">
             {{i}} - {{a.name}}
     </li>
 </ul>
