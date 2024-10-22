@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 
+interface formProps {
+  name: string;
+  city: string;
+}
 @Component({
   selector: 'app-component09',
   standalone: true,
@@ -9,5 +13,5 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './component09.component.css'
 })
 export class Component09Component {
-  name:string = '';
+  dataForm:formProps = {name: '', city: ''};
 }
