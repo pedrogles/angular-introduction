@@ -2,7 +2,7 @@
 <input type="text" [(ngModel)]="name">
 <p>{{name}}</p> -->
 
-<form action="">
+<!-- <form action="">
     <div>
         <label for="name">Nome:</label>
         <input type="text" name="name" id="name" [(ngModel)]="dataForm.name">
@@ -12,5 +12,18 @@
         <label for="city">Cidade:</label>
         <input type="text" name="city" id="city" [(ngModel)]="dataForm.city">
         <p>{{dataForm.city}}</p>
+    </div>
+</form> -->
+
+<form [formGroup]="form">
+    <div>
+        <label for="name">Nome:</label>
+        <input type="text" name="name" id="name" formControlName="name">
+        <p>{{form.value.name}}</p>
+    </div>
+    <div>
+        <label for="city">Cidade:</label>
+        <input type="text" name="city" id="city" formControlName="city">
+        <p>{{form.value.city}}</p>
     </div>
 </form>

@@ -1,17 +1,21 @@
 import { Component } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormControl, FormGroup, ReactiveFormsModule } from '@angular/forms';
 
-interface formProps {
-  name: string;
-  city: string;
-}
+// interface formProps {
+//   name: string;
+//   city: string;
+// }
 @Component({
   selector: 'app-component09',
   standalone: true,
-  imports: [FormsModule],
+  imports: [ReactiveFormsModule],
   templateUrl: './component09.component.html',
   styleUrl: './component09.component.css'
 })
 export class Component09Component {
-  dataForm:formProps = {name: '', city: ''};
+  form = new FormGroup({
+    name: new FormControl(''),
+    city: new FormControl('')
+  })
+  // dataForm:formProps = {name: '', city: ''};
 }
